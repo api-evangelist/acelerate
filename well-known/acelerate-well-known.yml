@@ -1,0 +1,117 @@
+generated: '2026-09-06'
+method: probed
+source: live GET of the named /.well-known/ path list on every host this record knows (acelerate.io, www.acelerate.io,
+  app.acelerate.io); api.acelerate.io, docs.acelerate.io and developer.acelerate.io do not resolve in DNS
+hit_count: 0
+note: 'No discovery document is served anywhere on the acelerate.io estate. On app.acelerate.io -- the only host
+  that serves an origin response -- every named path returned HTTP 404 from the Next.js application, and the negative-control
+  path returned the same 404, so these are true absences and not a path-echoing or SPA catch-all. The apex and www
+  hosts answer 301 to app.acelerate.io for every /.well-known/ path (a Cloudflare redirect rule; the retired marketing
+  site no longer has an origin), and the two non-/.well-known/ paths there are answered by a Cloudflare bot challenge
+  (403), not by an origin. No WellKnown and no SecurityTxt pointer is emitted: this file records an absence, not
+  a served surface.'
+hosts:
+- host: https://acelerate.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+  - path: /.well-known/aauth-resource.json
+    status: 301
+  - path: /.well-known/ucp.json
+    status: 301
+  - path: /.well-known/acp.json
+    status: 301
+  - path: /.well-known/apis.json
+    status: 301
+  - path: /apis.json
+    status: 301
+  - path: /apis.yml
+    status: 301
+  - path: /.well-known/acelerate-negative-control-4b17e2a9.json
+    status: 301
+    control: true
+  note: every probed path answered 301 to app.acelerate.io (no origin behind the retired marketing hostname); /apis.json
+    and /apis.yml answered a Cloudflare bot challenge (403)
+- host: https://www.acelerate.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+  - path: /.well-known/aauth-resource.json
+    status: 301
+  - path: /.well-known/ucp.json
+    status: 301
+  - path: /.well-known/acp.json
+    status: 301
+  - path: /.well-known/apis.json
+    status: 301
+  - path: /apis.json
+    status: 403
+  - path: /apis.yml
+    status: 403
+  - path: /.well-known/acelerate-negative-control-4b17e2a9.json
+    status: 301
+    control: true
+  note: every probed path answered 301 to app.acelerate.io (no origin behind the retired marketing hostname); /apis.json
+    and /apis.yml answered a Cloudflare bot challenge (403)
+- host: https://app.acelerate.io
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 403
+  - path: /apis.yml
+    status: 403
+  - path: /.well-known/acelerate-negative-control-4b17e2a9.json
+    status: 404
+    control: true
+  path_echo_control: passed

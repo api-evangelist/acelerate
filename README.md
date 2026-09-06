@@ -64,5 +64,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Acelerate is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Acelerate (acelerate.io) is a Santa Monica, California restaurant technology company founded in 2019 by former DoorDash operator George Jacobs. It launched as a virtual-brand and host-kitchen platform that let existing restaurants run additional delivery-only brands out of their idle kitchen capacity, and raised a USD 14.44M Series A led by Sequoia Capital in July 2021. The product has since moved up the restaurant supply chain -- the production application at app.acelerate.io covers purchasing from distributors, invoices and rebates, supplier offers, a menu manager, an order manager, sales storefronts, payments and bank accounts. Acelerate publishes no public developer program - no developer portal, API reference, OpenAPI or other machine-readable contract, SDK, webhook catalog or MCP server - and the marketing site that once carried its brand and customer pages has been retired, with acelerate.io now redirecting straight into the authenticated application.
+
+- Website: https://acelerate.io/ (301 to the authenticated application at https://app.acelerate.io/)
+- Application: https://app.acelerate.io/
+- LinkedIn: https://www.linkedin.com/company/acelerate
+
+**No public API surface.** A full contract-discovery pass on 2026-09-06 found no OpenAPI, GraphQL SDL, AsyncAPI, WSDL, .proto, MCP server, A2A agent card, llms.txt or `/.well-known/` discovery document on any resolving host, and no first-party package on npm or PyPI. See `x-contract-discovery` and `x-coverage` in `apis.yml` for the probed URLs and their statuses.
